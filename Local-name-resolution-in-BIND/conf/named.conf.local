@@ -1,0 +1,11 @@
+zone "mydomain.local" {
+    type master;
+    file "/etc/bind/zones/mydomain.local.zone";
+};
+
+zone "86.53.23.107.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/107.23.53.rev";
+};
+
+

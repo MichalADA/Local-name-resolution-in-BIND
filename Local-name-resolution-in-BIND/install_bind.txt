@@ -1,0 +1,42 @@
+sudo apt update 
+sudo apt upgrade -y 
+
+
+sudo apt install bind9 bind9utils bind9-doc -y
+
+sudo systemctl status bind9
+
+
+sudo nano /etc/bind/named.conf.local
+
+
+
+sudo mkdir -p /etc/bind/zones
+
+
+sudo nano /etc/bind/zones/mydomain.local.zone
+
+
+sudo nano /etc/bind/zones/107.23.53.rev
+
+
+
+sudo named-checkconf
+sudo named-checkzone mydomain.local /etc/bind/zones/mydomain.local.zone
+sudo named-checkzone 86.53.23.107.in-addr.arpa /etc/bind/zones/107.23.53.rev
+
+
+sudo systemctl restart bind9
+
+
+dig @107.23.53.86 www.mydomain.local
+
+
+dig -x 107.23.53.86
+
+
+
+Jak skonfigurować dostęp na zewnątrz?
+
+sudo nano /etc/bind/named.conf.options
+

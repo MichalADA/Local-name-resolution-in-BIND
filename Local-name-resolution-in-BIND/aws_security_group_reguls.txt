@@ -1,0 +1,23 @@
+
+
+Type: SSH
+Protocol: TCP
+Port Range: 22
+Source: Your Public IP (np. 203.0.113.0/32)
+
+
+Type: Custom UDP Rule
+Protocol: UDP
+Port Range: 53
+Source: 0.0.0.0/0 (lub ogranicz do znanych adresów)
+
+
+Type: Custom TCP Rule
+Protocol: TCP
+Port Range: 53
+Source: 0.0.0.0/0 (lub ogranicz do znanych adresów)
+
+
+
+Add static_ip to AWS 
+

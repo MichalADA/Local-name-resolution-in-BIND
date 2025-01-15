@@ -1,0 +1,11 @@
+$TTL 86400
+@   IN  SOA   ns1.mydomain.local. admin.mydomain.local. (
+        2025011401 ; Serial
+        3600       ; Refresh
+        1800       ; Retry
+        1209600    ; Expire
+        86400 )    ; Minimum TTL
+@   IN  NS    ns1.mydomain.local.
+ns1 IN  A     107.23.53.86
+www IN  A     107.23.53.86
+app IN  A     107.23.53.87
